@@ -1,0 +1,65 @@
+{
+  "name": "gazar-api",
+  "version": "0.0.1",
+  "description": "Gazar.am API service",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NTBA_FIX_319=1 nodemon --exec babel-node index.js",
+    "local": "cross-env NTBA_FIX_319=1 GAZAR_MONGO='mongodb://127.0.0.1:27017/gazar' npm start",
+    "deploy": "cross-env git push heroku master",
+    "logs": "cross-env heroku logs -t --app=gazar-api",
+    "migrate": "cross-env babel-node scripts/pg-migrate.js",
+    "email-it": "cross-env babel-node scripts/email",
+    "batch-sms": "cross-env babel-node scripts/batch-sms.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/gazar-am/gazar-api.git"
+  },
+  "author": "Tigran Bayburtsyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/gazar-am/gazar-api/issues"
+  },
+  "homepage": "https://gitlab.com/gazar-am/gazar-api#README",
+  "dependencies": {
+    "@google-cloud/storage": "^2.0.0",
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "fb": "^2.0.0",
+    "google-libphonenumber": "^3.1.10",
+    "graphql": "^0.13.2",
+    "graphql-type-json": "^0.3.1",
+    "handlebars": "^4.0.12",
+    "helmet": "^4.2.0",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
+    "mongoose": "^5.2.4",
+    "morgan": "^1.10.0",
+    "nanoid": "^2.0.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "strong-soap": "^1.14.0",
+    "subscriptions-transport-ws": "^0.9.12"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.2.1",
+    "mailgun.js": "^2.0.1",
+    "mjml": "^4.2.0-beta.3",
+    "nodemon": "^1.18.9",
+    "pg": "^7.4.3",
+    "request": "^2.88.0"
+  },
+  "engines": {
+    "node": "8.11.3"
+  }
+}

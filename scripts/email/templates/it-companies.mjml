@@ -1,0 +1,29 @@
+<mjml background-color="white">
+  <mj-body>
+    <mj-section>
+        <mj-column>
+          <mj-image width="300px" src="https://gazar.am/static/media/gazar-logo.57328d23.svg" alt="Gazar.am" />
+          <mj-text align="center">
+            <h1>
+              Հատուկ առաջարկ ՏՏ ընկերություններին
+            </h1>
+          </mj-text>
+          <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" />
+          <mj-text font-family="Helvetica" align="center">
+            <h2>Թարմ գյուղմթերքի ԱՆՎՃԱՐ առաքում գրասենյակներին ամեն օր!</h2>
+            <h3>Վճարումը ֆիքսված, ամսավճարով</h3>
+          </mj-text>
+          <mj-image src="https://storage.googleapis.com/gazar-am.appspot.com/fruit_boxes.jpg" />
+          <mj-text align="center" line-height="30px">
+            <h3>Ստացեք Ձեր օրգանիզմին շատ անհրաժեշտ վիտամինները Ձեր աշխատավյրում՝ բարձրացնելով Ձեր մտավոր աշխատանքի էֆեկտիվությունը։</h3>
+          </mj-text>
+          <mj-text align="center" line-height="30px">
+            <h2><a href="tel:+37455456454">📞 &nbsp;&nbsp;055 456 454</a></h3>
+          </mj-text>
+          <mj-button font-size="20px" font-family="Helvetica" background-color="#7ac943" color="white" href="https://gazar.am">
+            Պատվիել Հիմա
+          </mj-button>
+        </mj-column>
+      </mj-section>
+  </mj-body>
+</mjml>

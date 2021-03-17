@@ -1,0 +1,24 @@
+version: "3"
+services:
+  gazar-api:
+     image: repo.treescale.com/tigranbs/gazar-api:node
+     restart: always
+     ports:
+        - "4000:4000"
+     environment:
+        - PORT=4000
+        - NODE_ENV=production
+        - GAZAR_MONGO=mongodb://mongo:27017/gazar
+        - UPLOAD_DIR=/var/tmp
+     links:
+        - mongo
+
+  mongo:
+     image: mongo:4
+     restart: always
+     ports:
+       - "27017:27017"
+     environment:
+        - MONGO_INITDB_DATABASE=gazar
+     volumes:
+        - /var/lib/mongodb:/data/db
